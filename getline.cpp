@@ -20,10 +20,8 @@ void getline(int num)
   }
 }
 
-int main()
+int main(int argc, char* argv[])
 {
-  int num;
-  num=2;
-  getline(num);
+  getline(std::stoi(argv[1]));
   return 0;
 }
