@@ -11,8 +11,10 @@ int main()
   while(std::getline(ifs,str)) {
     std::string tmp;
     std::istringstream iss(str);
-    while(std::getline(iss,str,',')) {
-      std::cout << str << std::endl;
+    if(iaa==3) {
+      while(std::getline(iss,str,',')) {
+        std::cout << str << std::endl;
+      }
     }
     iaa++;
   }
