@@ -7,16 +7,23 @@ void getline(int num)
 {
   std::ifstream ifs("./test_matrix.csv");
   std::string str;
-  int iaa = 0;
+  int    line  = 0;
+  int    count = 0;
+  double hoge[10];
   while(std::getline(ifs,str)) {
     std::string tmp;
     std::istringstream iss(str);
-    if(iaa==num) {
+    if(line==num) {
       while(std::getline(iss,str,',')) {
-        std::cout << str << std::endl;
+        hoge[count] = std::stoi(str);
+        //        std::cout << str << std::endl;
+        count++;
       }
     }
-    iaa++;
+    line++;
+  }
+  for(int i=0;i<3;i++) {
+  std::cout << hoge[i] << std::endl;
   }
 }
 
